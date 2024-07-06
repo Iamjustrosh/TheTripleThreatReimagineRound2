@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper{
+    background-image: linear-gradient(to bottom, rgb(172, 241, 253), rgb(255, 255, 255));
+    height: auto;
+    background-attachment: fixed;
+    background-size: cover;
+}
