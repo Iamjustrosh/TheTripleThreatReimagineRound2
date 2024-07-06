@@ -1,16 +1,349 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url(./fonts/Montserrat-VariableFont_wght.ttf);
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Montserrat";
 }
 html,body{
     height: 100%;
     width: 100%;
+    
+}
+.wrapper{
+  background: linear-gradient(white,skyblue);
 }
 
-.wrapper{
-    background-image: linear-gradient(to bottom, rgb(172, 241, 253), rgb(255, 255, 255));
-    height: auto;
-    background-attachment: fixed;
+/* Navbar */
+
+.navbar{
+    background-color: transparent;
+    display: flex;
+    margin: 0 2%;
+    justify-content: space-between;
+    padding: 1% 0%;
+  }
+  
+  .tabs{
+    margin-right: 18%;
+  
+    ul{
+      display: flex;
+      list-style: none;
+    }
+  
+    li{
+      margin: 0 2%;
+      font-size: 1.2rem;
+      font-weight: 500;
+      padding: 0 2%;
+      justify-content: center;
+      
+     }
+     & li:first-child{
+       background-color: #cfdcea;
+       border-radius: 15px;
+       height: 25px;
+     }
+     i{
+      margin-left: 3%;
+      font-size: 1.2rem;
+      max-width: max-content
+    }
+  }
+  
+  /* Hero Section */
+  /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); */
+  
+  .hero-section{
+    height: 80vh;
+    background-image: url(./assets/images/bg.png);
+    background-position:bottom;
     background-size: cover;
+    background-repeat: no-repeat;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+  }
+  
+  .info{
+    margin: 4% 2%;
+    h1{
+      font-size: 3rem;
+      max-width: max-content;
+      letter-spacing: 0.1em;
+    }
+  
+    h3{
+      font-weight: 500;
+    }
+  
+    .price{
+      font-size: 2rem;
+      margin-top: 15%;
+    }
+  
+    button{
+      border: 2px solid #ff7029;
+      padding: 10px;
+      width: 18%;
+      border-radius: 10px;
+      background-color: #ff7029;
+      color: white;
+      font-size: 1.2em;
+      font-weight: 800;
+    }
+  }
+  
+  .product{
+    position: absolute;
+    width: 80vw;
+    margin-left: 45vw;
+  
+    .shoes{
+      position: inherit;
+      height: 85vh;
+      margin: 0 0 0 6%;
+      /* animation: appear 5s ease-out; */
+    }
+  
+    .content{
+      font-size: 0.8em;
+      color: BLACK;
+      background-color: #cbc8c8;
+      border-radius: 10px;
+      padding: 1%;
+      margin: 29.5% 0 0 0;
+      max-width: 25em;
+      font-weight: 600;
+    }
+
+    .star{
+        height: 20%;
+        position: absolute;
+        margin: 15% 0 0 15%;
+    }
+
+  }
+  
+  /* @keyframes appear {
+    0%{
+      opacity: 0;
+      transform: translateX(200px);
+    }
+  
+    100%{
+      opacity: 1;
+      transform: translateX(0px);
+    }
+    
+  } */
+  
+  /* Products */
+  .products{
+    height: 90vh;
+    padding: 5% 2% ;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+  
+    .product1 .box{
+      background: linear-gradient(#ffb686, #f66608);
+      height: 50%;
+      width: 70%;
+      border-radius: 20px;
+      padding: 55% 5% 0 5%;
+      display: flex;
+      justify-content: space-between;
+  
+      h2{
+        font-size: 1.5em;
+        font-weight: 700;
+      }
+  
+      i{
+        border-radius: 10px;
+        font-size: 1.5em;
+        height: 1.5em;
+        width: 1.5em;
+        text-align: center;
+        font-weight: 800;
+        background-color: white;
+      }
+    }
+  }
+  
+  .product1{
+    h3{
+      margin:2% 2%;
+      font-size: 1.5em;
+      max-width: max-content;
+    }
+    img{
+     position: absolute;
+     height: 38%;
+     margin: -19% 0 0 2%;
+    }
+    
+    h4{
+      margin-left: 2%;
+      max-width: 60%;
+      margin-top: 1%;
+      font-weight: 200;
+    }
+  }
+
+  #box2{
+    background: linear-gradient(#9fa4e6,#398dbb);
+  }
+  #box3{
+    background: linear-gradient(#d9d283,#998b00);
+  }
+
+  
+  .more{
+    /* font-weight: 800; */
+    margin-top: 50%;
+    font-size: 0.8em;
+    display: flex;
+    h1{
+      margin-top: 4%;
+    }
+  }
+  .more i{
+    font-size: 4em;
+  }
+  
+  /* Footer */
+  footer{
+    height: 55vh;
+    background-image: linear-gradient(#d5daff,#8ed7ff);
+    background: bl;
+  }
+  
+  .inner{
+    width: 100%;
+    margin-top: 2%;
+    position: absolute;
+    padding-left: 4%;
+    display: flex;
+  }
+  
+  .subscribe{
+    margin-right: 10%;
+    h1{
+      font-size: 2em;
+      font-weight: 700;
+    }
+    h3{
+      font-weight: 100;
+      margin:2% 0 ;
+    }
+    input{
+        background: transparent;
+        border: 2px solid black;
+        width: 80%;
+        padding: 2%;
+        margin: 1%;
+        height: 35%;
+    }
+    i{
+      font-size: 2em;
+    }
+  }
+  
+  .services{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    h6{
+      font-weight: 600;
+      font-size: 1em;
+    }
+    ul{
+      width: max-content;
+      margin-right: 6em;
+      list-style: none;
+    }
+    li{
+      margin: 3% 0;
+    }
+  }
+  
+  .brand{
+  
+    width: 74vw;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    margin: 25vh 0 0 4%;
+    .text{
+      font-family: 'Dancing Script';
+      font-weight: 700;
+      font-size: 3em;
+      align-self: center;
+      position: relative;
+      /* transform: translateY(50%); */
+      /* z-index: -5; */
+    }
+  
+  }
+  span{
+    font-size: calc(1em + 7vw);
+    margin: -1%;
+    animation: appear 3s ease-out 1ms;
+    display: hidden;
+    /* transform: translateY(50%); */
+  }
+  @keyframes appear {
+    0%{
+      opacity: 0; 
+      /* transform: translateY(40%); */
+      z-index: 1;
+    }
+  
+    25%{
+      opacity: 0.2;
+      transform: translateY(30%);
+    }
+  
+    50%{
+      opacity: 0.4;
+      transform: translateY(20%);
+    }
+  
+    75%{
+      opacity: 0.6;
+      transform: translateY(10%);
+    }
+  
+    100%{
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    
+  }
+  
+  .bottom{
+    border-top: 1px solid black;
+    background-color: #8ed7ff;
+    margin: 47vh 0 0 4%;
+    position: absolute;
+    height: 8vh;
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+.hand-waving{
+    position: absolute;
+    right: -5%;
+    height: 56%;
+    width: 40%;
+    overflow: hidden;
+    img{
+        height: 40rem;
+    }
 }
