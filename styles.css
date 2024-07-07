@@ -13,3 +13,10 @@ html,body{
     font-family: "Montserrat";
     src: url(./fonts/Montserrat-VariableFont_wght.ttf);
 }
+
+
+.stroke {
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+}
+
