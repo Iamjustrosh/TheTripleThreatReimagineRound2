@@ -3,6 +3,11 @@
   src: url(./fonts/Montserrat-VariableFont_wght.ttf);
 }
 
+@font-face {
+  font-family: "Monarda";
+  src: url(./fonts/Monarda.ttf);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -19,45 +24,48 @@ html,body{
 }
 
 /* Navbar */
-
-.navbar{
-    background-color: transparent;
+nav li{
+    height: 3rem;
+    font-weight: 600;
+}
+nav a{
+    height: 100%;
+    padding: 0 20px;
+    text-decoration: none;
     display: flex;
-    margin: 0 2%;
-    justify-content: space-between;
-    padding: 1% 0%;
-  }
-  
-  .tabs{
-    margin-right: 18%;
-  
-    ul{
-      display: flex;
-      list-style: none;
-    }
-  
-    li{
-      margin: 0 2%;
-      font-size: 1.2rem;
-      font-weight: 500;
-      padding: 0 2%;
-      justify-content: center;
-      
-     }
-     & li:first-child{
-       background-color: #cfdcea;
-       border-radius: 15px;
-       height: 25px;
-     }
-     i{
-      margin-left: 3%;
-      font-size: 1.2rem;
-      max-width: max-content
-    }
-  }
-  
-  /* Hero Section */
-  /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); */
+    align-items: center;
+}
+nav a:hover{
+    background-color: #f0f0f0;
+    border-radius: 40px;
+}
+
+nav i:hover{
+    text-shadow: #000000 0 0 20px;
+}
+
+.sidebar{
+    position: fixed;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.336);
+    display: none;
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    width: 100%;
+}
+
+@media (max-width:1023px) {
+    .onmobile{
+        display: none;
+    }       
+}
+
+
+
+/* Hero Section */
   
   .hero-section{
     height: 80vh;
@@ -100,13 +108,12 @@ html,body{
   
   .product{
     position: absolute;
-    width: 80vw;
-    margin-left: 45vw;
+    width: 55vw;
+    margin-left: 44vw;
   
     .shoes{
       position: inherit;
-      height: 85vh;
-      margin: 0 0 0 6%;
+      height: 80vh;
       /* animation: appear 5s ease-out; */
     }
   
@@ -217,46 +224,19 @@ html,body{
   }
   
   /* Footer */
+  .section1{
+    height: 100vh;
+    background-color: rgb(3, 152, 70);
+  }
   footer{
-    height: 55vh;
     background-image: linear-gradient(#d5daff,#8ed7ff);
-    background: bl;
   }
   
-  .inner{
-    width: 100%;
-    margin-top: 2%;
-    position: absolute;
-    padding-left: 4%;
-    display: flex;
-  }
-  
-  .subscribe{
-    margin-right: 10%;
-    h1{
-      font-size: 2em;
-      font-weight: 700;
-    }
-    h3{
-      font-weight: 100;
-      margin:2% 0 ;
-    }
-    input{
-        background: transparent;
+  .subscribe input{
         border: 2px solid black;
-        width: 80%;
-        padding: 2%;
-        margin: 1%;
-        height: 35%;
     }
-    i{
-      font-size: 2em;
-    }
-  }
   
   .services{
-    display: grid;
-    grid-template-columns: 30% 30% 30%;
     h6{
       font-weight: 600;
       font-size: 1em;
@@ -271,79 +251,13 @@ html,body{
     }
   }
   
-  .brand{
   
-    width: 74vw;
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    margin: 25vh 0 0 4%;
-    .text{
-      font-family: 'Dancing Script';
-      font-weight: 700;
-      font-size: 3em;
-      align-self: center;
-      position: relative;
-      /* transform: translateY(50%); */
-      /* z-index: -5; */
-    }
-  
-  }
-  span{
-    font-size: calc(1em + 7vw);
-    margin: -1%;
-    animation: appear 3s ease-out 1ms;
-    display: hidden;
-    /* transform: translateY(50%); */
-  }
-  @keyframes appear {
-    0%{
-      opacity: 0; 
-      /* transform: translateY(40%); */
-      z-index: 1;
-    }
-  
-    25%{
-      opacity: 0.2;
-      transform: translateY(30%);
-    }
-  
-    50%{
-      opacity: 0.4;
-      transform: translateY(20%);
-    }
-  
-    75%{
-      opacity: 0.6;
-      transform: translateY(10%);
-    }
-  
-    100%{
-      opacity: 1;
-      transform: translateY(0%);
-    }
-    
+  .element span{
+    font-family: 'Monarda';
+    /* font-size: 3em; */
   }
   
   .bottom{
     border-top: 1px solid black;
     background-color: #8ed7ff;
-    margin: 47vh 0 0 4%;
-    position: absolute;
-    height: 8vh;
-    width: 75%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
-
-.hand-waving{
-    position: absolute;
-    right: -5%;
-    height: 56%;
-    width: 40%;
-    overflow: hidden;
-    img{
-        height: 40rem;
-    }
-}

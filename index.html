@@ -6,35 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
     <link href='https://fonts.googleapis.com/css?family=Dancing Script' rel='stylesheet'>
     <title>Zapoos</title>
 </head>
-
 <body>
+
     <div class="wrapper ">
 <!-- Navbar -->
-<div class="navbar">
-    <div class="logo">
-        <img src="./assets/Logo.svg" alt="">
-    </div>
-    <div class="tabs">
-        <ul>
-            <li>Home</li>
-            <li>New</li>
-            <li>Men</li>
-            <li>Women</li>
-            <li>Kids</li>
-            <li>Collection</li>
-            <li>Sale</li>
-            <i class="ri-user-fill"></i>
-            <i class="ri-shopping-cart-2-line"></i>
+
+    <nav class="bg-transparent">
+        <ul class="main w-[100%] list-none flex items-center pt-2 ">
+            <li class="ml-[2%] mt-1 mr-auto"><img src="./assets/Logo.svg" alt=""></li>
+            <li class="onmobile"><a href=""> Home </a></li>
+            <li class="onmobile"><a href=""> New </a></li>
+            <li class="onmobile"><a href=""> Men </a></li>
+            <li class="onmobile"><a href=""> Women </a></li>
+            <li class="onmobile"><a href=""> Kids </a></li>
+            <li class="onmobile"><a href=""> Collection </a></li>
+            <li class="onmobile"><a href=""> Sale </a></li>
+            <i class="onmobile text-xl mr-2 ri-user-fill"></i>
+            <i class="onmobile text-xl mr-2 ri-shopping-cart-2-line"></i>
+            <li class="lg:hidden" onclick=showSidebar()><a href="#"><i class=" ri-menu-line"></i></a></li>
         </ul>
 
-    </div>
-</div>
+        <ul class="sidebar top-0 right-0 h-[80%] w-[60%] z-20 flex flex-col items-center ">
+            <li onclick=hideSidebar()><a href="#"><i class="ri-close-large-line"></i></a></li>   
+            <li><a href=""> Home </a></li>
+            <li><a href=""> New </a></li>
+            <li><a href=""> Men </a></li>
+            <li><a href=""> Women </a></li>
+            <li><a href=""> Kids </a></li>
+            <li><a href=""> Collection </a></li>
+            <li><a href=""> Sale </a></li>
+            <div class="icon w-50 flex flex-row">
+                <i class="ri-user-fill mr-5"></i> 
+                <i class="ri-shopping-cart-2-line ml-5"></i>
+            </div>
+        </ul>
+    </nav>
+
+    <div class="section1"></div>
 <!-- Hero-Section -->
-<div class="hero-section">
+<!-- <div class="hero-section">
 <div class="info">
 <h1>UNDER ARMOR</h1>
 <h1> <b>LOCKDOWN 6 BASKETBALL </b></h1> <br>
@@ -50,10 +65,10 @@
     <h5>DURABLE RUBBER OUTSOLE <br> WITH HERRINGBONE <br> TRACTION PATTERN.</h5>
 </div>
 </div>
-</div>
+</div> -->
 
 <!-- Products -->
-<div class="products">
+<!-- <div class="products">
 <div class="product1">
 <div class="box">
     <img src="./assets/shoes/endorphin.png" alt="">
@@ -90,43 +105,43 @@
 </div>
 </div>
 
-
+ -->
 
 
 <!-- Footer -->
-<footer>
-<div class="inner">
-    <div class="subscribe">
-        <h1>SIGN UP FOR 10% OFF</h1>
-        <h3>Subscribe to get special offers & once-in-a-lifetime deals</h3>
-        <input type="text" placeholder="Enter your email address here"> <br>
-        <i class="ri-facebook-box-fill"></i>
-        <i class="ri-linkedin-box-fill"></i>
-        <i class="ri-instagram-fill"></i>
-        <i class="ri-whatsapp-fill"></i>
+<footer class="h-[70vh] lg:h-[55vh] ">
+<div class="inner w-full h-[50vh] p-6 absolute pl-[4%] flex flex-col lg:flex-row">
+    <div class="subscribe mr-[10%]">
+        <h1 class="text-2xl lg:text-3xl font-bold">SIGN UP FOR 10% OFF</h1>
+        <h3 class="font-light mb-2">Subscribe to get special offers & once-in-a-lifetime deals</h3>
+        <input class="bg-transparent w-[80%] h-25 ml-0 m-4 p-2 " type="text" placeholder="Enter your email address here"> <br>
+        <i class="text-3xl ri-facebook-box-fill"></i>
+        <i class="text-3xl ri-linkedin-box-fill"></i>
+        <i class="text-3xl ri-instagram-fill"></i>
+        <i class="text-3xl ri-whatsapp-fill"></i>
     </div>
-    <div class="services">
-        <div>
+    <div class="services grid grid-rows-3 lg:grid-cols-4">
+        <div class="mt-5">
             <h6>About</h6>
-            <ul>
+            <ul class="hidden lg:block">
                 <li>Zappos One</li>
                 <li>Zappos for Good</li>
                 <li>Zappos at Work</li>
                 <li>Coupons</li>
             </ul>
         </div>
-        <div>
+        <div class="mt-5">
             <h6>Services</h6>
-            <ul>
+            <ul class="hidden lg:block">
                 <li>FAQ's</li>
                 <li>Contact info.</li>
                 <li>Term's and Conditions</li>
                 <li>Privacy Policy</li>
             </ul>
         </div>
-        <div>
+        <div class="mt-5">
             <h6>Explore</h6>
-            <ul>
+            <ul class="hidden lg:block">
                 <li>Brands</li>
                 <li>Shoes</li>
                 <li>Jackets</li>
@@ -135,23 +150,23 @@
         </div>
     </div>
 </div>
-<div class="brand">
-<img src="./assets" alt="">
-<div class="text">
-    <span>Z</span>
-    <span>a</span>
-    <span>p</span>
-    <span>p</span>
-    <span>o</span>
-    <span>s</span>
+<div class="element lg:w-[74vw] flex flex-col lg:flex-row lg:justify-between absolute mt-[50vh] lg:mt-[26vh] ml-[4%] overflow-hidden">
+    <img class="w-[10%] h-[10%]" src="./assets/images/brooks.png" alt="">
+    <div class="lg:text-5xl font-bold items-center relative lg:mt-5 lg:pr-5">
+        <span class="text-8xl lg:text-[3.5em]">Z</span>
+        <span class="text-8xl lg:text-[3.5em]">a</span>
+        <span class="text-8xl lg:text-[3.5em]">p</span>
+        <span class="text-8xl lg:text-[3.5em]">p</span>
+        <span class="text-8xl lg:text-[3.5em]">o</span>
+        <span class="text-8xl lg:text-[3.5em]">s</span>
+    </div>
 </div>
-</div>
-<div class="bottom">
+<div class="bottom flex flex-col lg:flex-row mt-[65vh] lg:mt-[47vh] lg:ml-[4%] absolute w-full lg:w-[75%] text-center lg:justify-between p-4">
 <h2>&copy; 2024 All Rights Reserved</h2>
 <h2>Made with &hearts; By - The Triple Threat</h2>
 </div>
-<div class="hand-waving">
-    <img src="./assets/hand_waving.gif" alt="">
+<div class="absolute mt-[45%] lg:mt-0 right-0 lg:h-[55%] w-[70%] lg:w-[40%] overflow-hidden">
+    <img class="lg:ml-20" src="./assets/hand_waving.gif" alt="">
 </div>
 </footer>
 
