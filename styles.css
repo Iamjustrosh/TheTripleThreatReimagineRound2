@@ -224,10 +224,6 @@ nav i:hover{
   }
   
   /* Footer */
-  .section1{
-    height: 100vh;
-    background-color: rgb(3, 152, 70);
-  }
   footer{
     background-image: linear-gradient(#d5daff,#8ed7ff);
   }
