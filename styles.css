@@ -169,6 +169,19 @@ nav i:hover{
     transform: translate(30%, -40%);
   }
 }
+
+@media (max-width:1023px) {
+  .products{
+      display: block;
+  }       
+  .product1 img{
+    position: absolute;
+    height: 18%;
+    margin-top: -35%; 
+   
+   }
+}
+
  
   /* Footer */
   footer{
