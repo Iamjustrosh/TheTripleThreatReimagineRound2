@@ -156,12 +156,16 @@ nav i:hover{
      height: 30%;
      margin: -13% 0 0 0; 
     }
+
   
 .product1 .box:hover{
-    /* transform:translate3d(10px 10px 0); */
-    img{
-    animation: position 2s ;
-    }
+    /* img{
+    animation: position 2s forwards;
+    } */
+      height: 70vh;
+      .details{
+        position: absolute;
+      }
 }
 
 @keyframes position {
