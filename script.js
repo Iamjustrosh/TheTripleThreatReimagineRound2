@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 function showSidebar(){
     let sidebar = document.querySelector('.sidebar');
     sidebar.style.display = 'flex';
@@ -8,7 +7,6 @@ function hideSidebar(){
     let sidebar = document.querySelector('.sidebar');
     sidebar.style.display = 'none';
 }
-=======
 document.addEventListener("DOMContentLoaded", function() {
     var tl = gsap.timeline({
         onComplete: () => {
@@ -23,4 +21,3 @@ document.addEventListener("DOMContentLoaded", function() {
       .to("#text3", { duration: 0.5, autoAlpha: 1 })
       .to("#text3", { duration: 0.5, scale: 70, delay: 0.5 });
 });
->>>>>>> main
