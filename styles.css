@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url(./fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Monarda";
+  src: url(./fonts/Monarda.ttf);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -8,20 +18,8 @@ html,body{
     height: 100%;
     width: 100%;
 }
-
-@font-face {
-    font-family: "Montserrat";
-    src: url(./fonts/Montserrat-VariableFont_wght.ttf);
-}
-
-@font-face {
-  font-family: "Monarda";
-  src: url(./fonts/Monarda.ttf);
-}
-
-.stroke {
-    -webkit-text-stroke: 1px white;
-    color: transparent;
+.wrapper{
+  background: linear-gradient(white,skyblue);
 }
 
 nav li{
@@ -68,13 +66,10 @@ nav i:hover{
 /* Hero Section */
 
 .hero-section{
-  height: 80vh;
-  background-image: url(./assets/images/bg.png);
+  background-image: url(./assets/Clouds.png);
   background-position:bottom;
   background-size: cover;
   background-repeat: no-repeat;
-  font-family: "Montserrat", sans-serif;
-  display: flex;
 }
 
 .info{
@@ -220,4 +215,9 @@ footer{
 .bottom{
   border-top: 1px solid black;
   background-color: #8ed7ff;
+}
+
+.stroke {
+  -webkit-text-stroke: 1px white;
+  color: transparent;
 }
