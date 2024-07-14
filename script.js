@@ -14,4 +14,7 @@ function preLoader(){
           .to("#text3", { duration: 0.5, scale: 70, delay: 0.5 });
     });    
 }
+
+
+
 preLoader();
