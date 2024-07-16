@@ -27,7 +27,7 @@ function preLoader(){
     
 }
 
-preLoader();
+// preLoader();
 
 function menuTab(){    
     var menu = document.querySelector(".menu");
@@ -53,9 +53,9 @@ function menuTab(){
     })
 }
 menuTab();
-gsap.to("#marquee h1",{
+gsap.to(".marquee-content",{
     transform: 'translateX(-100%)',
-    duration:7,
+    duration: 15,
     repeat:-1,
     ease:"none"
 })

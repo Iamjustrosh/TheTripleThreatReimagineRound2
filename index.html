@@ -14,20 +14,20 @@
 
 <body>      
          
-    <div id="preloader" class="fixed top-0 left-0 w-full h-full bg-black flex flex-col justify-center items-center text-white text-2xl md:text-4xl">
+    <!-- <div id="preloader" class="fixed top-0 left-0 w-full h-full bg-black flex flex-col justify-center items-center text-white text-2xl md:text-4xl">
         <div id="text1" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"><span class="opacity-0 loader-content1">To</span> <span class="opacity-0 loader-content1 font-bold">Live</span></div>
         <div id="text2" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"><span class="opacity-0 loader-content2" >and</span> <span class="opacity-0 loader-content2 font-bold">Deliver</span></div>
         <div id="text3" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 font-semibold opacity-0 font-sans text-5xl stroke">WOW</div>
-    </div>
+    </div> -->
 
-    <div id="main-content" class="hidden">
+    <div id="main-content" class="">
         <div class="wrapper overflow-x-hidden">
             <!-- Navbar -->
             
                 <nav class="bg-transparent">
                     <ul class="main w-[100%] list-none flex items-center pt-2 ">
                         <li class="ml-[2%] mt-1 mr-auto"><img src="./assets/Logo.svg" alt=""></li>
-                        <li class="onmobile rounded-full bg-[#f0f0f0]"><a href=""> Home </a></li>
+                        <li class="onmobile rounded-full bg-[#cfcfcf]"><a href=""> Home </a></li>
                         <li class="onmobile"><a href=""> New </a></li>
                         <li class="onmobile"><a href=""> Men </a></li>
                         <li class="onmobile"><a href=""> Women </a></li>
@@ -54,12 +54,37 @@
                         </div>
                     </ul>
                 </nav>
-            
+           
+                
             <!-- Hero-Section -->
-            <div class="hero-section h-screen flex">
+            <div class="hero-section w-full h-screen relative">
+                <div class="bg-img w-full h-full absolute">
+                    <img class="w-full h-full object-cover" src="./assets/images/bg.png" alt="">
+                </div>
+                <div class="info w-full h-full absolute left-4 top-7 lg:left-10 lg:top-12">
+                    <h1 class="font-semibold text-2xl lg:text-5xl">UNDER ARMOUR</h1>
+                    <h1 class="font-bold text-4xl lg:text-6xl uppercase">Lockdown 6 Basketball </h1>
+                    <p class="mt-2 lg:mt-4 lg:text-2xl">
+                        Mesh panels on the upper for added breathability and comfort.
+                    </p>
+                    <div class="price mt-8 lg:mt-24">
+                        <h1 class="font-extrabold text-2xl lg:text-4xl">$ 225.00</h1>
+                    </div>
+                    <div class="shop-btn bg-[#F14C1A] w-fit lg:text-2xl p-2 my-2 rounded-md font-bold text-white cursor-pointer">
+                        BUY NOW
+                    </div>
+                </div>
+                <div id="hero-shoe" class="w-full h-full relative">
+                    <img class="w-20 md:w-40 absolute left-20 top-[40%] md:top-1/3 md:left-1/2" src="./assets/stars.png" alt="">
+                    <img class="w-96 md:w-[55%] absolute top-1/2" src="./assets/shoes/underarmour_lockdown6.png" alt="">
+                </div>
+            </div>
+
+
+            <!-- <div class="hero-section w-full h-screen">
             <div class="info">
-            <h1>UNDER ARMOR</h1>
-            <h1> <b>LOCKDOWN 6 BASKETBALL </b></h1> <br>
+            <h1 class="font-semibold">UNDER ARMOR</h1>
+            <h1 class=" font-bold">LOCKDOWN 6 BASKETBALL</h1> <br>
             <h3>MESH PANELS ON THE UPPER FOR ADDED <BR> BREATHABILITY AND COMFORT.</h3>
             
             <h2 class="price"><b>$ 225.00</b></h2>
@@ -73,21 +98,23 @@
             </div>
             </div>
             </div>
-            
+             -->
             <!-- Shoes Marquee -->
-             <div id="marquee" class="bg-[#ebff32] flex items-center h-20">
-                <h1 class="font-bold text-2xl p-4 shrink-0">To Live and Deliver WOW</h1>
-                <h1 class="font-bold text-2xl p-4 shrink-0">To Live and Deliver WOW</h1>
-                <h1 class="font-bold text-2xl p-4 shrink-0">To Live and Deliver WOW</h1>
-                <h1 class="font-bold text-2xl p-4 shrink-0">To Live and Deliver WOW</h1>
-                <h1 class="font-bold text-2xl p-4 shrink-0">To Live and Deliver WOW</h1>
-                <h1 class="font-bold text-2xl p-4 shrink-0">To Live and Deliver WOW</h1>    
-                <h1 class="font-bold text-2xl p-4 shrink-0">To Live and Deliver WOW</h1>
-                <h1 class="font-bold text-2xl p-4 shrink-0">To Live and Deliver WOW</h1>
-                <h1 class="font-bold text-2xl p-4 shrink-0">To Live and Deliver WOW</h1>
-                <h1 class="font-bold text-2xl p-4 shrink-0">To Live and Deliver WOW</h1>
-                <h1 class="font-bold text-2xl p-4 shrink-0">To Live and Deliver WOW</h1>
-                <h1 class="font-bold text-2xl p-4 shrink-0">To Live and Deliver WOW</h1>    
+             <div id="marquee" class="bg-gradient-to-b from-[#f1ff77a2] to-[#f1ff34]  flex items-center h-20">
+                <div class="marquee-content flex">
+                <h1 class="font-bold text-2xl flex items-center p-5 shrink-0">🎉 10% Discount on order above $200.00 <img class="w-20 shoes" src="./assets/animated_shoes.gif" alt=""></h1>
+                <h1 class="font-bold text-2xl flex items-center p-5 shrink-0">🎉 50% Off for New Arrivals <img class="w-20 shoes" src="./assets/animated_shoes.gif" alt=""></h1>
+                <h1 class="font-bold text-2xl flex items-center p-5 shrink-0">🎉 10% Discount on order above $200.00 <img class="w-20 shoes" src="./assets/animated_shoes.gif" alt=""></h1>
+                <h1 class="font-bold text-2xl flex items-center p-5 shrink-0">🎉 50% Off for New Arrivals <img class="w-20 shoes" src="./assets/animated_shoes.gif" alt=""></h1>
+                <h1 class="font-bold text-2xl flex items-center p-5 shrink-0">🎉 10% Discount on order above $200.00 <img class="w-20 shoes" src="./assets/animated_shoes.gif" alt=""></h1>
+                <h1 class="font-bold text-2xl flex items-center p-5 shrink-0">🎉 50% Off for New Arrivals <img class="w-20 shoes" src="./assets/animated_shoes.gif" alt=""></h1>
+                <h1 class="font-bold text-2xl flex items-center p-5 shrink-0">🎉 10% Discount on order above $200.00 <img class="w-20 shoes" src="./assets/animated_shoes.gif" alt=""></h1>
+                <h1 class="font-bold text-2xl flex items-center p-5 shrink-0">🎉 50% Off for New Arrivals <img class="w-20 shoes" src="./assets/animated_shoes.gif" alt=""></h1>
+                <h1 class="font-bold text-2xl flex items-center p-5 shrink-0">🎉 10% Discount on order above $200.00 <img class="w-20 shoes" src="./assets/animated_shoes.gif" alt=""></h1>
+                <h1 class="font-bold text-2xl flex items-center p-5 shrink-0">🎉 50% Off for New Arrivals <img class="w-20 shoes" src="./assets/animated_shoes.gif" alt=""></h1>
+                <h1 class="font-bold text-2xl flex items-center p-5 shrink-0">🎉 10% Discount on order above $200.00 <img class="w-20 shoes" src="./assets/animated_shoes.gif" alt=""></h1>
+                <h1 class="font-bold text-2xl flex items-center p-5 shrink-0">🎉 50% Off for New Arrivals <img class="w-20 shoes" src="./assets/animated_shoes.gif" alt=""></h1>
+            </div>
              </div>
             <!-- Products -->
             <div class="products h-[105vh] lg:h-[90vh] py-[5%] px-[2%]">

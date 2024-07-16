@@ -19,7 +19,7 @@ html,body{
     width: 100%;
 }
 .wrapper{
-  background: linear-gradient(white,skyblue);
+  background: linear-gradient(white,#9BDAE9);
 }
 
 nav li{
@@ -34,7 +34,7 @@ nav a{
   align-items: center;
 }
 nav a:hover{
-  background-color: #f0f0f0;
+  background-color: #cfcfcf;
   border-radius: 40px;
 }
 
@@ -65,14 +65,13 @@ nav i:hover{
 
 /* Hero Section */
 
-.hero-section{
-  background-image: url(./assets/Clouds.png);
-  background-position:bottom;
+/* .hero-section{
+  background-image: url(./assets/images/bg.png);
   background-size: cover;
   background-repeat: no-repeat;
-}
+} */
 
-.info{
+/* .info{
   margin: 4% 2%;
   h1{
     font-size: 3rem;
@@ -99,9 +98,9 @@ nav i:hover{
     font-size: 1.2em;
     font-weight: 800;
   }
-}
+} */
 
-.product{
+/* .product{
   position: absolute;
   width: 55vw;
   margin-left: 44vw;
@@ -109,7 +108,6 @@ nav i:hover{
   .shoes{
     position: inherit;
     height: 80vh;
-    /* animation: appear 5s ease-out; */
   }
 
   .content{
@@ -129,7 +127,7 @@ nav i:hover{
       margin: 15% 0 0 15%;
   }
 
-}
+} */
 /* Products */
 .products{
   display: grid;
@@ -220,4 +218,7 @@ footer{
 .stroke {
   -webkit-text-stroke: 1px white;
   color: transparent;
+}
+#marquee .shoes{
+  transform: rotateY(180deg);
 }
