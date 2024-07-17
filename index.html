@@ -5,237 +5,340 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Dancing Script' rel='stylesheet'>           
+    <link href='https://fonts.googleapis.com/css?family=Dancing Script' rel='stylesheet'>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+    </style>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Zappos</title>
 </head>
 
-<body>      
-         
-    <!-- <div id="preloader" class="fixed top-0 left-0 w-full h-full bg-black flex flex-col justify-center items-center text-white text-2xl md:text-4xl">
-        <div id="text1" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"><span class="opacity-0 loader-content1">To</span> <span class="opacity-0 loader-content1 font-bold">Live</span></div>
-        <div id="text2" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"><span class="opacity-0 loader-content2" >and</span> <span class="opacity-0 loader-content2 font-bold">Deliver</span></div>
-        <div id="text3" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 font-semibold opacity-0 font-sans text-5xl stroke">WOW</div>
-    </div> -->
+<body>
 
-    <div id="main-content" class="">
-        <div class="wrapper overflow-x-hidden">
+    <div id="preloader"
+        class="fixed top-0 left-0 w-full h-full bg-black flex flex-col justify-center items-center text-white text-2xl md:text-4xl z-50">
+        <div id="text1" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"><span
+                class="opacity-0 loader-content1">To</span> <span
+                class="opacity-0 loader-content1 font-bold">Live</span></div>
+        <div id="text2" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"><span
+                class="opacity-0 loader-content2">and</span> <span
+                class="opacity-0 loader-content2 font-bold">Deliver</span></div>
+        <div id="text3"
+            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 font-semibold opacity-0 font-sans text-5xl stroke">
+            WOW</div>
+    </div>
+
+    <div id="main-content" class="hidden">
+        <div class="wrapper ">
             <!-- Navbar -->
-            
-                <nav class="bg-transparent">
-                    <ul class="main w-[100%] list-none flex items-center pt-2 ">
-                        <li class="ml-[2%] mt-1 mr-auto"><img src="./assets/Logo.svg" alt=""></li>
-                        <li class="onmobile rounded-full bg-[#cfcfcf]"><a href=""> Home </a></li>
-                        <li class="onmobile"><a href=""> New </a></li>
-                        <li class="onmobile"><a href=""> Men </a></li>
-                        <li class="onmobile"><a href=""> Women </a></li>
-                        <li class="onmobile"><a href=""> Kids </a></li>
-                        <li class="onmobile"><a href=""> Collection </a></li>
-                        <li class="onmobile"><a href=""> Sale </a></li>
-                        <i class="onmobile text-xl mr-2 ri-user-fill"></i>
-                        <i class="onmobile text-xl mr-2 ri-shopping-cart-2-line"></i>
-                        <li class="lg:hidden menu"><a href="#"><i class="ri-menu-line"></i></a></li>
-                    </ul>
-            
-                    <ul class="sidebar top-0 right-[-80%] h-[80%] w-[60%] z-20 flex flex-col items-center lg:hidden rounded-xl">
-                        <li class="cross"><a href="#"><i class="ri-close-large-line"></i></a></li>   
-                        <li><a href=""> Home </a></li>
-                        <li><a href=""> New </a></li>
-                        <li><a href=""> Men </a></li>
-                        <li><a href=""> Women </a></li>
-                        <li><a href=""> Kids </a></li>
-                        <li><a href=""> Collection </a></li>
-                        <li><a href=""> Sale </a></li>
-                        <div class="icon w-50 flex flex-row">
-                            <li><i class="ri-user-fill mr-5"></i> </li>
-                            <li><i class="ri-shopping-cart-2-line ml-5"></i></li>                            
-                        </div>
-                    </ul>
-                </nav>
-           
-                
+
+            <nav class="bg-transparent ">
+                <ul class="main w-[100%] list-none flex items-center pt-2 ">
+                    <li class="ml-[2%] mt-1 mr-auto"><img src="./assets/Logo.svg" alt=""></li>
+                    <li class="onmobile rounded-full bg-[#cfcfcf]"><a href=""> Home </a></li>
+                    <li class="onmobile"><a href=""> New </a></li>
+                    <li class="onmobile"><a href=""> Men </a></li>
+                    <li class="onmobile"><a href=""> Women </a></li>
+                    <li class="onmobile"><a href=""> Kids </a></li>
+                    <li class="onmobile"><a href=""> Collection </a></li>
+                    <li class="onmobile"><a href=""> Sale </a></li>
+                    <i class="onmobile text-xl mr-2 ri-user-fill"></i>
+                    <i class="onmobile text-xl mr-2 ri-shopping-cart-2-line"></i>
+                    <li class="lg:hidden menu"><a href="#"><i class="ri-menu-line"></i></a></li>
+                </ul>
+
+                <ul
+                    class="sidebar top-0 right-[-80%] h-[80%] w-[60%] z-20 flex flex-col items-center lg:hidden rounded-xl">
+                    <li class="cross"><a href="#"><i class="ri-close-large-line"></i></a></li>
+                    <li><a href=""> Home </a></li>
+                    <li><a href=""> New </a></li>
+                    <li><a href=""> Men </a></li>
+                    <li><a href=""> Women </a></li>
+                    <li><a href=""> Kids </a></li>
+                    <li><a href=""> Collection </a></li>
+                    <li><a href=""> Sale </a></li>
+                    <div class="icon w-50 flex flex-row">
+                        <li><i class="ri-user-fill mr-5"></i> </li>
+                        <li><i class="ri-shopping-cart-2-line ml-5"></i></li>
+                    </div>
+                </ul>
+            </nav>
+
+
             <!-- Hero-Section -->
-            <div class="hero-section w-full h-screen relative">
+            <div class="hero-section w-full h-screen relative overflow-hidden">
                 <div class="bg-img w-full h-full absolute">
                     <img class="w-full h-full object-cover" src="./assets/images/bg.png" alt="">
                 </div>
-                <div class="info w-full h-full absolute left-4 top-7 lg:left-10 lg:top-12">
-                    <h1 class="font-semibold text-2xl lg:text-5xl">UNDER ARMOUR</h1>
-                    <h1 class="font-bold text-4xl lg:text-6xl uppercase">Lockdown 6 Basketball </h1>
-                    <p class="mt-2 lg:mt-4 lg:text-2xl">
-                        Mesh panels on the upper for added breathability and comfort.
+                <div class="info w-full h-full absolute left-4 top-7 lg:left-12 lg:top-28 z-10">
+                    <h1 class="hero-text font-semibold text-2xl lg:text-5xl">UNDER ARMOUR</h1>
+                    <h1 class="hero-text font-bold text-4xl lg:text-6xl uppercase">Lockdown 6 Basketball </h1>
+                    <p class="mt-2 lg:mt-4 lg:font-medium lg:text-2xl">
+                        Mesh panels on the upper for added <br> breathability and comfort.
                     </p>
                     <div class="price mt-8 lg:mt-24">
                         <h1 class="font-extrabold text-2xl lg:text-4xl">$ 225.00</h1>
                     </div>
-                    <div class="shop-btn bg-[#F14C1A] w-fit lg:text-2xl p-2 my-2 rounded-md font-bold text-white cursor-pointer">
-                        BUY NOW
+                    <div
+                        class="shop-btn bg-[#F14C1A] w-fit lg:text-2xl p-2 my-2 rounded-md font-bold text-white cursor-pointer">
+                        <span class="shop-text">BUY NOW</span>
                     </div>
                 </div>
                 <div id="hero-shoe" class="w-full h-full relative">
-                    <img class="w-20 md:w-40 absolute left-20 top-[40%] md:top-1/3 md:left-1/2" src="./assets/stars.png" alt="">
-                    <img class="w-96 md:w-[55%] absolute top-1/2" src="./assets/shoes/underarmour_lockdown6.png" alt="">
+                    <img class="star w-20 md:w-40 absolute left-20 top-[60%] md:top-1/3 lg:top-1/3 md:left-[25%] lg:left-[60%]"
+                        src="./assets/stars.png" alt="">
+                    <div class="heroshoes ease-out transition-transform duration-100">
+                        <img class="hero-shoe rotate-[20deg] translate-x-[40%] w-96 md:w-[65%] lg:w-[55%] absolute top-1/2 md:top-[20%] lg:left-1/2 md:left-1/3 lg:top-2"
+                            src="./assets/shoes/underarmour_lockdown6.png" alt="">
+                    </div>
+
                 </div>
             </div>
 
 
-            <!-- <div class="hero-section w-full h-screen">
-            <div class="info">
-            <h1 class="font-semibold">UNDER ARMOR</h1>
-            <h1 class=" font-bold">LOCKDOWN 6 BASKETBALL</h1> <br>
-            <h3>MESH PANELS ON THE UPPER FOR ADDED <BR> BREATHABILITY AND COMFORT.</h3>
-            
-            <h2 class="price"><b>$ 225.00</b></h2>
-            <button> BUY NOW </button>
-            </div>
-            <div class="product">
-            <img class="star" src="./assets/stars.png" alt="">    
-            <img class="shoes" src="./assets/shoes/underarmour_lockdown6.png" alt="">
-            <div class="content">
-                <h5>DURABLE RUBBER OUTSOLE <br> WITH HERRINGBONE <br> TRACTION PATTERN.</h5>
-            </div>
-            </div>
-            </div>
-             -->
+
             <!-- Shoes Marquee -->
-             <div id="marquee" class="bg-gradient-to-b from-[#f1ff77a2] to-[#f1ff34]  flex items-center h-20">
+            <div id="marquee"
+                class="bg-gradient-to-b from-[#ffffffe5] to-[#ffffff86]  flex items-center h-12 lg:h-20 overflow-hidden">
                 <div class="marquee-content flex">
-                <h1 class="font-bold text-2xl flex items-center p-5 shrink-0">🎉 10% Discount on order above $200.00 <img class="w-20 shoes" src="./assets/animated_shoes.gif" alt=""></h1>
-                <h1 class="font-bold text-2xl flex items-center p-5 shrink-0">🎉 50% Off for New Arrivals <img class="w-20 shoes" src="./assets/animated_shoes.gif" alt=""></h1>
-                <h1 class="font-bold text-2xl flex items-center p-5 shrink-0">🎉 10% Discount on order above $200.00 <img class="w-20 shoes" src="./assets/animated_shoes.gif" alt=""></h1>
-                <h1 class="font-bold text-2xl flex items-center p-5 shrink-0">🎉 50% Off for New Arrivals <img class="w-20 shoes" src="./assets/animated_shoes.gif" alt=""></h1>
-                <h1 class="font-bold text-2xl flex items-center p-5 shrink-0">🎉 10% Discount on order above $200.00 <img class="w-20 shoes" src="./assets/animated_shoes.gif" alt=""></h1>
-                <h1 class="font-bold text-2xl flex items-center p-5 shrink-0">🎉 50% Off for New Arrivals <img class="w-20 shoes" src="./assets/animated_shoes.gif" alt=""></h1>
-                <h1 class="font-bold text-2xl flex items-center p-5 shrink-0">🎉 10% Discount on order above $200.00 <img class="w-20 shoes" src="./assets/animated_shoes.gif" alt=""></h1>
-                <h1 class="font-bold text-2xl flex items-center p-5 shrink-0">🎉 50% Off for New Arrivals <img class="w-20 shoes" src="./assets/animated_shoes.gif" alt=""></h1>
-                <h1 class="font-bold text-2xl flex items-center p-5 shrink-0">🎉 10% Discount on order above $200.00 <img class="w-20 shoes" src="./assets/animated_shoes.gif" alt=""></h1>
-                <h1 class="font-bold text-2xl flex items-center p-5 shrink-0">🎉 50% Off for New Arrivals <img class="w-20 shoes" src="./assets/animated_shoes.gif" alt=""></h1>
-                <h1 class="font-bold text-2xl flex items-center p-5 shrink-0">🎉 10% Discount on order above $200.00 <img class="w-20 shoes" src="./assets/animated_shoes.gif" alt=""></h1>
-                <h1 class="font-bold text-2xl flex items-center p-5 shrink-0">🎉 50% Off for New Arrivals <img class="w-20 shoes" src="./assets/animated_shoes.gif" alt=""></h1>
+                    <h1 class="font-bold text-lg lg:text-2xl flex items-center p-5 shrink-0">🎉 10% Discount on order
+                        above $200.00 <img class="w-20 shoes" src="./assets/animated_shoes.gif" alt=""></h1>
+                    <h1 class="font-bold text-lg lg:text-2xl flex items-center p-5 shrink-0">🎉 50% Off for New Arrivals
+                        <img class="w-20 shoes" src="./assets/animated_shoes.gif" alt="">
+                    </h1>
+                    <h1 class="font-bold text-lg lg:text-2xl flex items-center p-5 shrink-0">🎉 10% Discount on order
+                        above $200.00 <img class="w-20 shoes" src="./assets/animated_shoes.gif" alt=""></h1>
+                    <h1 class="font-bold text-lg lg:text-2xl flex items-center p-5 shrink-0">🎉 50% Off for New Arrivals
+                        <img class="w-20 shoes" src="./assets/animated_shoes.gif" alt="">
+                    </h1>
+                    <h1 class="font-bold text-lg lg:text-2xl flex items-center p-5 shrink-0">🎉 10% Discount on order
+                        above $200.00 <img class="w-20 shoes" src="./assets/animated_shoes.gif" alt=""></h1>
+                    <h1 class="font-bold text-lg lg:text-2xl flex items-center p-5 shrink-0">🎉 50% Off for New Arrivals
+                        <img class="w-20 shoes" src="./assets/animated_shoes.gif" alt="">
+                    </h1>
+                    <h1 class="font-bold text-lg lg:text-2xl flex items-center p-5 shrink-0">🎉 10% Discount on order
+                        above $200.00 <img class="w-20 shoes" src="./assets/animated_shoes.gif" alt=""></h1>
+                    <h1 class="font-bold text-lg lg:text-2xl flex items-center p-5 shrink-0">🎉 50% Off for New Arrivals
+                        <img class="w-20 shoes" src="./assets/animated_shoes.gif" alt="">
+                    </h1>
+                    <h1 class="font-bold text-lg lg:text-2xl flex items-center p-5 shrink-0">🎉 10% Discount on order
+                        above $200.00 <img class="w-20 shoes" src="./assets/animated_shoes.gif" alt=""></h1>
+                    <h1 class="font-bold text-lg lg:text-2xl flex items-center p-5 shrink-0">🎉 50% Off for New Arrivals
+                        <img class="w-20 shoes" src="./assets/animated_shoes.gif" alt="">
+                    </h1>
+                    <h1 class="font-bold text-lg lg:text-2xl flex items-center p-5 shrink-0">🎉 10% Discount on order
+                        above $200.00 <img class="w-20 shoes" src="./assets/animated_shoes.gif" alt=""></h1>
+                    <h1 class="font-bold text-lg lg:text-2xl flex items-center p-5 shrink-0">🎉 50% Off for New Arrivals
+                        <img class="w-20 shoes" src="./assets/animated_shoes.gif" alt="">
+                    </h1>
+                </div>
             </div>
-             </div>
             <!-- Products -->
             <div class="products h-[105vh] lg:h-[90vh] py-[5%] px-[2%]">
-            <div class="product1 flex lg:flex-col">
-            <div class="box h-[20vh] lg:h-[35vh] w-[50%] lg:w-[70%] rounded-3xl mb-20 lg:mb-2 px-[5%] pt-[32%] lg:pt-[55%] flex justify-between" id="box1">
-                <img src="./assets/shoes/endorphin.png" alt="">
-                <h2 class="font-bold text-3xl"> $150 </h2>
-                <i class="ri-add-line rounded-xl text-2xl h-10 w-10 p-[3%] font-bold bg-white"></i>
+                <div class="product1 flex lg:flex-col">
+                    <div class="box h-[20vh] lg:h-[35vh] w-[50%] lg:w-[70%] rounded-3xl mb-20 lg:mb-2 px-[5%] pt-[32%] lg:pt-[55%] flex justify-between"
+                        id="box1">
+                        <img src="./assets/shoes/endorphin.png" alt="">
+                        <h2 class="font-bold text-3xl"> $150 </h2>
+                        <i class="ri-add-line rounded-xl text-2xl h-10 w-10 p-[3%] font-bold bg-white"></i>
+                    </div>
+                    <div>
+                        <h3 class="m-[2%] font-bold text-xl max-w-max">Saucony <br> Endorphin Pro 4</h3></b>
+                        <h4 class="ml-[2%] mt-2 font-normal w-[50vw] lg:w-[65%]">Experience a seamless heel-to-toe
+                            transition for an effortless stride.</h4>
+                    </div>
+                </div>
+
+                <div class="product1 flex lg:flex-col">
+                    <div class="box h-[20vh] lg:h-[35vh] w-[50%] lg:w-[70%] rounded-3xl mb-20 lg:mb-2 px-[5%] pt-[32%] lg:pt-[55%] flex justify-between"
+                        id="box2">
+                        <img src="./assets/shoes/hoka_clifton.png" alt="">
+                        <h2 class="font-bold text-3xl"> $150 </h2>
+                        <i class="ri-add-line rounded-xl text-2xl h-10 w-10 p-[3%] font-bold bg-white"></i>
+                    </div>
+                    <div class="details">
+                        <h3 class="m-[2%] font-bold text-xl max-w-max">Hoka <br> Clifton 9</h3></b>
+                        <h4 class="ml-[2%] mt-2 font-normal w-[50vw] lg:w-[65%]">Experience great cushioning and high
+                            rebound while running</h4>
+                    </div>
+                </div>
+
+                <div class="product1 flex lg:flex-col">
+                    <div class="box h-[20vh] lg:h-[35vh] w-[50%] lg:w-[70%] rounded-3xl mb-20 lg:mb-2 px-[5%] pt-[32%] lg:pt-[55%] flex justify-between"
+                        id="box3">
+                        <img class="mt-[20%]" src="./assets/shoes/altra_outroad.png" alt="">
+                        <h2 class="font-bold text-3xl"> $150 </h2>
+                        <i class="ri-add-line rounded-xl text-2xl h-10 w-10 p-[3%] font-bold bg-white"></i>
+                    </div>
+                    <div>
+                        <h3 class="m-[2%] font-bold text-xl max-w-max">Altra <br> Outroad 2</h3></b>
+                        <h4 class="ml-[2%] mt-2 font-normal w-[50vw] lg:w-[65%]">Balanced Cushioning platforms position
+                            your heel and forefoot at equal level.</h4>
+                    </div>
+                </div>
+
+                <div class="more font-bold justify-center lg:mt-[60%] flex">
+                    <h1 class="mt-0.5 lg:mt-1">View More </h1>
+                    <i class="ri-arrow-right-s-line text-2xl"></i>
+                </div>
+
+
+                <div class="flex lg:w-[95vw] lg:justify-between ">
+                    <h1 class="border-t-2 border-black hidden lg:block lg:mt-24 lg:w-[30%]"></h1>
+                    <h1
+                        class="border-t-2 lg:border-none mt-5 lg:mt-20 w-full lg:w-[40%] pt-5 lg:pt-0 text-center border-black">
+                        YOUR FEET DESERVE THE BEST</h1>
+                    <h1 class="border-t-2 border-black hidden lg:block lg:mt-24 lg:w-[30%]"></h1>
+                </div>
+                <img class="absolute mt-[-38%] ml-[63%] h-[16vh] lg:h-[50%] lg:mt-[30vh] lg:ml-[72vw]"
+                    src="./assets/skate_boy.gif" alt="">
+
             </div>
-                <div>
-                    <h3 class="m-[2%] font-bold text-xl max-w-max">Saucony <br> Endorphin Pro 4</h3></b>
-                    <h4 class="ml-[2%] mt-2 font-normal w-[50vw] lg:w-[65%]">Experience a seamless heel-to-toe transition for an effortless stride.</h4>
+
+            <!-- Picture with Text Section -->
+
+            <div class="thirdMain">
+                <div
+                    class="third-section p-4 w-full flex flex-col lg:flex-row gap-10 justify-center items-start relative">
+                    <div class="leftimg w-full lg:w-[30%] lg:h-screen flex ">
+                        <img class="self-center" src="./assets/images/zturns25.png" alt="">
+                    </div>
+                    <div
+                        class="righttext w-full lg:w-1/2 text-4xl lg:text-7xl font-bold self-center text-center text-[#BEA86E] ">
+                        Come celebrate all year long <span class="stroke-b font-[Gilroy]">with sales, exclusives</span>,
+                        and extra-special surprises.</div>
+                </div>
+                <div
+                    class="third-section p-4 w-full flex flex-col lg:flex-row gap-10 justify-center items-start relative">
+                    <div class="leftimg w-full lg:w-[30%] lg:h-screen flex ">
+                        <img class="self-center" src="./assets/images/zfrgds.png" alt="">
+                    </div>
+                    <div
+                        class="righttext w-full lg:w-1/2 text-4xl lg:text-7xl font-bold self-center text-center text-[#BEA86E] ">
+                        Learn how to easily <span class="stroke-b font-[Gilroy]">donate or recycle</span> your
+                        secondhand items.</div>
+                </div>
+                <div
+                    class="third-section p-4 w-full flex flex-col lg:flex-row gap-10 justify-center items-start relative">
+                    <div class="leftimg w-full lg:w-[30%] lg:h-screen flex ">
+                        <img class="self-center" src="./assets/images/zone.png" alt="">
+                    </div>
+                    <div
+                        class="righttext w-full lg:w-1/2 text-4xl lg:text-7xl font-bold self-center text-center text-[#BEA86E] ">
+                        At Zappos, diversity, equity, inclusion, and <span class="stroke-b font-[Gilroy]">individuality
+                            are central</span> to our core values.</div>
+                </div>
+                <div
+                    class="third-section p-4 w-full flex flex-col lg:flex-row gap-10 justify-center items-start relative">
+                    <div class="leftimg w-full lg:w-[30%] lg:h-screen flex ">
+                        <img class="self-center" src="./assets/images/zgfg.png" alt="">
+                    </div>
+                    <div
+                        class="righttext w-full lg:w-1/2 text-4xl lg:text-7xl font-bold self-center text-center text-[#BEA86E] ">
+                        We're highlighting brands who are making a <span class="stroke-b font-[Gilroy]">difference and
+                            helping build</span> a better place for us all.</div>
                 </div>
             </div>
-            
-            <div class="product1 flex lg:flex-col">
-            <div class="box h-[20vh] lg:h-[35vh] w-[50%] lg:w-[70%] rounded-3xl mb-20 lg:mb-2 px-[5%] pt-[32%] lg:pt-[55%] flex justify-between" id="box2">
-                <img src="./assets/shoes/hoka_clifton.png" alt="">
-                <h2 class="font-bold text-3xl"> $150 </h2>
-                <i class="ri-add-line rounded-xl text-2xl h-10 w-10 p-[3%] font-bold bg-white"></i>
-            </div>
-                <div class="details">
-                    <h3 class="m-[2%] font-bold text-xl max-w-max">Hoka <br> Clifton 9</h3></b>
-                    <h4 class="ml-[2%] mt-2 font-normal w-[50vw] lg:w-[65%]">Experience great cushioning and high rebound while running</h4>
-                </div>
-            </div>
-            
-            <div class="product1 flex lg:flex-col">
-            <div class="box h-[20vh] lg:h-[35vh] w-[50%] lg:w-[70%] rounded-3xl mb-20 lg:mb-2 px-[5%] pt-[32%] lg:pt-[55%] flex justify-between" id="box3">
-                <img class="mt-[20%]" src="./assets/shoes/altra_outroad.png" alt="">
-                <h2 class="font-bold text-3xl"> $150 </h2>
-                <i class="ri-add-line rounded-xl text-2xl h-10 w-10 p-[3%] font-bold bg-white"></i>
-            </div>
-                <div>
-                    <h3 class="m-[2%] font-bold text-xl max-w-max">Altra <br> Outroad 2</h3></b>
-                    <h4 class="ml-[2%] mt-2 font-normal w-[50vw] lg:w-[65%]">Balanced Cushioning platforms position your heel and forefoot at equal level.</h4>
-                </div>
-            </div>
-            
-            <div class="more font-bold justify-center lg:mt-[60%] flex">
-            <h1 class="mt-0.5 lg:mt-1">View More </h1>
-            <i class="ri-arrow-right-s-line text-2xl"></i>
-            </div>
-            
-            
-            <div class="flex lg:w-[95vw] lg:justify-between ">
-                <h1 class="border-t-2 border-black hidden lg:block lg:mt-24 lg:w-[30%]"></h1>
-                <h1 class="border-t-2 lg:border-none mt-5 lg:mt-20 w-full lg:w-[40%] pt-5 lg:pt-0 text-center border-black">YOUR FEET DESERVE THE BEST</h1>
-                <h1 class="border-t-2 border-black hidden lg:block lg:mt-24 lg:w-[30%]"></h1>
-            </div>
-                <img class="absolute mt-[-38%] ml-[63%] h-[16vh] lg:h-[50%] lg:mt-[30vh] lg:ml-[72vw]"  src="./assets/skate_boy.gif" alt="">
-            
-            </div>
-            
-            
+
             <!-- Footer -->
             <footer class="h-[70vh] lg:h-[55vh] ">
-            <div class="inner w-full h-[50vh] p-6 absolute pl-[4%] flex flex-col lg:flex-row">
-                <div class="subscribe mr-[10%]">
-                    <h1 class="text-2xl lg:text-3xl font-bold">SIGN UP FOR 10% OFF</h1>
-                    <h3 class="font-light mb-2">Subscribe to get special offers & once-in-a-lifetime deals</h3>
-                    <input class="bg-transparent w-[100%] lg:w-[80%] h-25 ml-0 m-4 p-2 " type="text" placeholder="Enter your email address here"> <br>
-                    <i class="text-3xl ri-facebook-box-fill"></i>
-                    <i class="text-3xl ri-linkedin-box-fill"></i>
-                    <i class="text-3xl ri-instagram-fill"></i>
-                    <i class="text-3xl ri-whatsapp-fill"></i>
-                </div>
-                <div class="services grid grid-rows-3 lg:grid-cols-4">
-                    <div class="mt-5">
-                        <h6>About</h6>
-                        <ul class="hidden lg:block">
-                            <li>Zappos One</li>
-                            <li>Zappos for Good</li>
-                            <li>Zappos at Work</li>
-                            <li>Coupons</li>
-                        </ul>
+                <div class="inner w-full h-[50vh] p-6 absolute pl-[4%] flex flex-col lg:flex-row">
+                    <div class="subscribe mr-[10%]">
+                        <h1 class="text-2xl lg:text-3xl font-bold">SIGN UP FOR 10% OFF</h1>
+                        <h3 class="font-light mb-2">Subscribe to get special offers & once-in-a-lifetime deals</h3>
+                        <input class="bg-transparent w-[100%] lg:w-[80%] h-25 ml-0 m-4 p-2 " type="text"
+                            placeholder="Enter your email address here"> <br>
+                        <i class="text-3xl ri-facebook-box-fill"></i>
+                        <i class="text-3xl ri-linkedin-box-fill"></i>
+                        <i class="text-3xl ri-instagram-fill"></i>
+                        <i class="text-3xl ri-whatsapp-fill"></i>
                     </div>
-                    <div class="mt-5">
-                        <h6>Services</h6>
-                        <ul class="hidden lg:block">
-                            <li>FAQ's</li>
-                            <li>Contact info.</li>
-                            <li>Term's and Conditions</li>
-                            <li>Privacy Policy</li>
-                        </ul>
-                    </div>
-                    <div class="mt-5">
-                        <h6>Explore</h6>
-                        <ul class="hidden lg:block">
-                            <li>Brands</li>
-                            <li>Shoes</li>
-                            <li>Jackets</li>
-                            <li>Watches</li>
-                        </ul>
+                    <div class="services grid grid-rows-3 lg:grid-cols-4">
+                        <div class="mt-5">
+                            <h6>About</h6>
+                            <ul class="hidden lg:block">
+                                <li>Zappos One</li>
+                                <li>Zappos for Good</li>
+                                <li>Zappos at Work</li>
+                                <li>Coupons</li>
+                            </ul>
+                        </div>
+                        <div class="mt-5">
+                            <h6>Services</h6>
+                            <ul class="hidden lg:block">
+                                <li>FAQ's</li>
+                                <li>Contact info.</li>
+                                <li>Term's and Conditions</li>
+                                <li>Privacy Policy</li>
+                            </ul>
+                        </div>
+                        <div class="mt-5">
+                            <h6>Explore</h6>
+                            <ul class="hidden lg:block">
+                                <li>Brands</li>
+                                <li>Shoes</li>
+                                <li>Jackets</li>
+                                <li>Watches</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="element lg:w-[74vw] flex flex-col lg:flex-row lg:justify-between absolute mt-[50vh] lg:mt-[26vh] ml-[4%] overflow-hidden">
-                <img class="w-[10%] h-[10%]" src="./assets/images/brooks.png" alt="">
-                <div class="lg:text-5xl font-bold items-center relative lg:mt-1 lg:pr-5">
-                    <span class="text-8xl lg:text-[3.5em]">Z</span>
-                    <span class="text-8xl lg:text-[3.5em]">a</span>
-                    <span class="text-8xl lg:text-[3.5em]">p</span>
-                    <span class="text-8xl lg:text-[3.5em]">p</span>
-                    <span class="text-8xl lg:text-[3.5em]">o</span>
-                    <span class="text-8xl lg:text-[3.5em]">s</span>
+                <div
+                    class="element lg:w-[74vw] flex flex-col lg:flex-row lg:justify-between absolute mt-[50vh] lg:mt-[26vh] ml-[4%] overflow-hidden">
+                    <img class="w-[10%] h-[10%]" src="./assets/images/brooks.png" alt="">
+                    <div class="lg:text-5xl font-bold items-center relative lg:mt-1 lg:pr-5">
+                        <span class="text-8xl lg:text-[3.5em]">Z</span>
+                        <span class="text-8xl lg:text-[3.5em]">a</span>
+                        <span class="text-8xl lg:text-[3.5em]">p</span>
+                        <span class="text-8xl lg:text-[3.5em]">p</span>
+                        <span class="text-8xl lg:text-[3.5em]">o</span>
+                        <span class="text-8xl lg:text-[3.5em]">s</span>
+                    </div>
                 </div>
-            </div>
-            <div class="bottom flex flex-col lg:flex-row mt-[65vh] lg:mt-[47vh] lg:ml-[4%] absolute w-full lg:w-[75%] text-center lg:justify-between p-4">
-            <h2>&copy; 2024 All Rights Reserved</h2>
-            <h2>Made with &hearts; By - The Triple Threat</h2>
-            </div>
-            <div class="absolute mt-[45%] lg:mt-0 right-0 lg:h-[55%] w-[70%] lg:w-[40%] overflow-hidden">
-                <img class="lg:ml-20" src="./assets/hand_waving.gif" alt="">
-            </div>
+                <div
+                    class="bottom flex flex-col lg:flex-row mt-[65vh] lg:mt-[47vh] lg:ml-[4%] absolute w-full lg:w-[75%] text-center lg:justify-between p-4">
+                    <h2>&copy; 2024 All Rights Reserved</h2>
+                    <h2>Made with &hearts; By - The Triple Threat</h2>
+                </div>
+                <div class="absolute mt-[45%] lg:mt-0 right-0 lg:h-[55%] w-[70%] lg:w-[40%] overflow-hidden">
+                    <img class="lg:ml-20" src="./assets/hand_waving.gif" alt="">
+                </div>
             </footer>
-    </div>
+        </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+            integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://unpkg.com/split-type"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/SplitText.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+            integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script>
+        <script>
+
+
+
+
+
+            const lenis = new Lenis()
+
+            lenis.on('scroll', (e) => {
+                // console.log(e)
+            })
+
+            function raf(time) {
+                lenis.raf(time)
+                requestAnimationFrame(raf)
+            }
+
+            requestAnimationFrame(raf)
+        </script>
+        <script src="script.js"></script>
+
 
 </body>
 

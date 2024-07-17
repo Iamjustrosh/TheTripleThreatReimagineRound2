@@ -7,6 +7,10 @@
   font-family: "Monarda";
   src: url(./fonts/Monarda.ttf);
 }
+@font-face {
+  font-family: "Gilroy";
+  src: url(./fonts/Gilroy-ExtraBold.otf);
+}
 
 *{
     margin: 0;
@@ -219,6 +223,60 @@ footer{
   -webkit-text-stroke: 1px white;
   color: transparent;
 }
+.stroke-b {
+  -webkit-text-stroke: 1px black;
+  color: transparent;
+}
 #marquee .shoes{
   transform: rotateY(180deg);
+}
+
+.shop-btn{
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.shop-btn .shop-text{
+  display: inline-block;
+  transition: opacity 0.6s ease-in;
+}
+
+.shop-btn::after {
+  content: '\F114'; /* Unicode for a Remix Icon, e.g., home icon */
+  font-family: 'Remixicon'; /* Ensure you have Remix Icon included in your project */
+  position: absolute;
+  top: 50%;
+  right: -50%; /* Start position of the icon (hidden) */
+  transform: translate(50%,-50%);
+  opacity: 0;
+  color: white; /* Icon color */
+  transition: all 0.6s ease-in;
+}
+.shop-btn:hover .shop-text{
+  opacity: 0;
+}
+
+.shop-btn:hover::after {
+  opacity: 1;
+  right: 50%; /* Adjust this value as needed for positioning */
+  
+}
+.shop-btn::before{
+  content: '' ;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  background-color: #3d0000;
+  height: 100%;
+  z-index: -1;
+  transition: all 0.6s ease-in;
+} 
+.shop-btn:hover::before{
+    width: 100%;
+    }
+
+.righttext .char{
+  font-family: Gilroy ;
 }
