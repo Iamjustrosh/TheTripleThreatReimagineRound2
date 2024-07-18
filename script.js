@@ -21,6 +21,7 @@ function preLoader() {
 
                 })
                 thirdSectionAnimation();
+                marqueeParaAnimation();
             }
         });
         tl.to(".loader-content1", { duration: 0.7, autoAlpha: 1, stagger: 0.5 })
@@ -60,11 +61,51 @@ function menuTab() {
 }
 
 function marqueeAnimation() {
-    gsap.to(".marquee-content", {
-        transform: 'translateX(-100%)',
-        duration: 15,
-        repeat: -1,
-        ease: "none"
+    window.addEventListener("wheel",function(dets){
+        if(dets.deltaY>0){
+            gsap.to(".marquee-content", {
+                transform: 'translateX(-200%)',
+                duration: 10,
+                repeat: -1,
+                ease: "none"
+            })
+
+            gsap.to("#marquee .shoes",{
+                rotationY:180
+              })
+        }
+        else{
+            gsap.to(".marquee-content", {
+                transform: 'translateX(0%)',
+                duration: 10,
+                repeat: -1,
+                ease: "none"
+            })
+            gsap.to("#marquee .shoes",{
+                rotationY:0
+              })
+        }
+
+    })
+
+    window.addEventListener("wheel",function(dets){
+        if(dets.deltaY>0){
+            gsap.to(".marquee-content-reverse", {
+                transform: 'translateX(100%)',
+                duration: 12,
+                repeat: -1,
+                ease: "none"
+            })
+        }
+        else{
+            gsap.to(".marquee-content-reverse", {
+                transform: 'translateX(-100%)',
+                duration: 12,
+                repeat: -1,
+                ease: "none"
+            })
+        }
+
     })
 }
 
@@ -145,11 +186,94 @@ function thirdSectionAnimation() {
 
 }
 
+function marqueeParaAnimation(){
+    var sText = document.querySelectorAll(".para");
+
+    sText.forEach(function (element) {
+        var splitText = new SplitType(element, { type: "chars" });
+        var chars = splitText.chars;
+
+        gsap.from(chars, {
+            scrollTrigger: {
+                trigger: element,  
+                start: "top 70%",
+                end: "top 20%",
+                scrub: true,
+            },
+            opacity: 0.2,
+            stagger: 0.3,
+            duration: 0.1,
+            ease: "none",
+        });
+    });
+}
 
 
+function mobileMarqueeAnimation(){
+    let startX;
+    let scrollDirection;
+    
+    window.addEventListener("touchstart", function (e) {
+        startX = e.touches[0].clientX;
+    });
+    
+    window.addEventListener("touchmove", function (e) {
+        let touch = e.touches[0];
+        let moveX = touch.clientX - startX;
+    
+        if (moveX > 0) {
+            scrollDirection = -1; // Scroll left
+        } else {
+            scrollDirection = 1; // Scroll right
+        }
+        updateMarquee();
+    });
+    
+    function updateMarquee() {
+        if(scrollDirection === -1){
+            gsap.to(".marquee-content", {
+                transform: 'translateX(-200%)',
+                duration: 10,
+                repeat: -1,
+                ease: "none"
+            })
+    
+            gsap.to("#marquee .shoes",{
+                rotationY:180
+              })
+        }
+        else{
+            gsap.to(".marquee-content", {
+                transform: 'translateX(0%)',
+                duration: 10,
+                repeat: -1,
+                ease: "none"
+            })
+            gsap.to("#marquee .shoes",{
+                rotationY:0
+              })
+        }
+        if (scrollDirection === 1) {
+            gsap.to(".marquee-content-reverse", {
+                transform: 'translateX(100%)',
+                duration: 12,
+                repeat: -1,
+                ease: "none"
+            });
+        } else {
+            gsap.to(".marquee-content-reverse", {
+                transform: 'translateX(-100%)',
+                duration: 12,
+                repeat: -1,
+                ease: "none"
+            });
+        }
+    }
+}
 
 
 preLoader();
 menuTab();
 marqueeAnimation();
+mobileMarqueeAnimation();
 shoeAnimation();

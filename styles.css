@@ -227,9 +227,9 @@ footer{
   -webkit-text-stroke: 1px black;
   color: transparent;
 }
-#marquee .shoes{
-  transform: rotateY(180deg);
-}
+  /* #marquee .shoes{
+    transform: rotateY(180deg);
+  } */
 
 .shop-btn{
   display: inline-block;
