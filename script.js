@@ -61,8 +61,8 @@ function menuTab() {
 }
 
 function marqueeAnimation() {
-    window.addEventListener("wheel",function(dets){
-        if(dets.deltaY>0){
+    window.addEventListener("wheel", function (dets) {
+        if (dets.deltaY > 0) {
             gsap.to(".marquee-content", {
                 transform: 'translateX(-200%)',
                 duration: 10,
@@ -70,26 +70,26 @@ function marqueeAnimation() {
                 ease: "none"
             })
 
-            gsap.to("#marquee .shoes",{
-                rotationY:180
-              })
+            gsap.to("#marquee .shoes", {
+                rotationY: 180
+            })
         }
-        else{
+        else {
             gsap.to(".marquee-content", {
                 transform: 'translateX(0%)',
                 duration: 10,
                 repeat: -1,
                 ease: "none"
             })
-            gsap.to("#marquee .shoes",{
-                rotationY:0
-              })
+            gsap.to("#marquee .shoes", {
+                rotationY: 0
+            })
         }
 
     })
 
-    window.addEventListener("wheel",function(dets){
-        if(dets.deltaY>0){
+    window.addEventListener("wheel", function (dets) {
+        if (dets.deltaY > 0) {
             gsap.to(".marquee-content-reverse", {
                 transform: 'translateX(100%)',
                 duration: 12,
@@ -97,7 +97,7 @@ function marqueeAnimation() {
                 ease: "none"
             })
         }
-        else{
+        else {
             gsap.to(".marquee-content-reverse", {
                 transform: 'translateX(-100%)',
                 duration: 12,
@@ -169,7 +169,7 @@ function thirdSectionAnimation() {
 
         gsap.from(chars, {
             scrollTrigger: {
-                trigger: element,  
+                trigger: element,
                 start: "top 70%",
                 end: "top 20%",
                 scrub: true,
@@ -186,7 +186,7 @@ function thirdSectionAnimation() {
 
 }
 
-function marqueeParaAnimation(){
+function marqueeParaAnimation() {
     var sText = document.querySelectorAll(".para");
 
     sText.forEach(function (element) {
@@ -195,7 +195,7 @@ function marqueeParaAnimation(){
 
         gsap.from(chars, {
             scrollTrigger: {
-                trigger: element,  
+                trigger: element,
                 start: "top 70%",
                 end: "top 20%",
                 scrub: true,
@@ -210,67 +210,65 @@ function marqueeParaAnimation(){
 
 
 function mobileMarqueeAnimation(){
-    let startX;
+    let startY;
     let scrollDirection;
     
+   
     window.addEventListener("touchstart", function (e) {
-        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
     });
     
+  
     window.addEventListener("touchmove", function (e) {
         let touch = e.touches[0];
-        let moveX = touch.clientX - startX;
+        let moveY = touch.clientY - startY;
     
-        if (moveX > 0) {
-            scrollDirection = -1; // Scroll left
+        if (moveY > 0) {
+            scrollDirection = 1; 
         } else {
-            scrollDirection = 1; // Scroll right
+            scrollDirection = -1; 
         }
         updateMarquee();
     });
     
     function updateMarquee() {
-        if(scrollDirection === -1){
+        if (scrollDirection === 1) {
             gsap.to(".marquee-content", {
                 transform: 'translateX(-200%)',
                 duration: 10,
                 repeat: -1,
                 ease: "none"
             })
+            gsap.to(".marquee-content-reverse", {
+                transform: 'translateX(100%)',
+                duration: 4,
+                repeat: -1,
+                ease: "none"
+            });
     
-            gsap.to("#marquee .shoes",{
-                rotationY:180
-              })
+            gsap.to("#marquee .shoes", {
+                rotationY: 180
+            })
         }
-        else{
+        else {
             gsap.to(".marquee-content", {
                 transform: 'translateX(0%)',
                 duration: 10,
                 repeat: -1,
                 ease: "none"
             })
-            gsap.to("#marquee .shoes",{
-                rotationY:0
-              })
-        }
-        if (scrollDirection === 1) {
-            gsap.to(".marquee-content-reverse", {
-                transform: 'translateX(100%)',
-                duration: 12,
-                repeat: -1,
-                ease: "none"
-            });
-        } else {
             gsap.to(".marquee-content-reverse", {
                 transform: 'translateX(-100%)',
-                duration: 12,
+                duration: 6,
                 repeat: -1,
                 ease: "none"
             });
+            gsap.to("#marquee .shoes", {
+                rotationY: 0
+            })
         }
     }
 }
-
 
 preLoader();
 menuTab();
