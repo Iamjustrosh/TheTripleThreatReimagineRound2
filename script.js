@@ -135,15 +135,19 @@ function thirdSectionAnimation() {
         gsap.from(img, {
             scrollTrigger: {
                 trigger: img,
-                start: "top 50%",
+                start: "top 30%",
                 end: "top top",
                 scrub: true,
             },
             opacity: 0,
+            x:-100,
             duration: 1,
+            scale: 1.2,
+            // ease: "bounce.in",
         });
     });
 
+    
 
     /* Old Animation 
 
