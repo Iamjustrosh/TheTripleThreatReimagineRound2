@@ -153,15 +153,13 @@ nav i:hover {
     background: linear-gradient(#d9d283, #998b00);
 }
 
-.product .box:hover {
-    img {
-        animation: position 1s ease-in-out forwards;
-    }
+.product .box img {
+    transition: transform 1s ease-in-out;
 }
 
-@keyframes position {
-    100% {
-        transform: scale(1.2, 1.2);
+.product .box:hover {
+    img {
+        transform: scale(1.2);
     }
 }
 
@@ -189,10 +187,6 @@ footer {
     li {
         margin: 3% 0;
     }
-}
-
-.element span {
-    font-family: 'Monarda';
 }
 
 .bottom {
