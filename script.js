@@ -278,19 +278,19 @@ function mobileMarqueeAnimation(){
 function productAndCart(){
     var products = [{
         image: "./assets/shoes/endorphin.png",
-        price: "$50",
+        price: "$149",
         name: "Saucony <br> Endorphin Pro 4",
         description: "Experience a seamless heel-to-toe transition for an effortless stride."
     },
     {
         image: "./assets/shoes/hoka_clifton.png",
-        price: "$150",
+        price: "$139",
         name: "Hoka <br> Clifton 9",
         description: "Experience great cushioning and high rebound while running."
     },
     {
         image: "./assets/shoes/altra_outroad.png ",
-        price: "$199",
+        price: "$109",
         name: "Altra <br> Outroad 2",
         description: "Balanced Cushioning platforms position your heel and forefoot at equal level."
     }
@@ -304,8 +304,8 @@ function addProduct() {
         clutter += `<div class="product w-full flex flex-row lg:flex-col ">
                         <div class="box h-[25vh] w-[50%] lg:w-[60%] rounded-3xl mb-20 lg:mb-2 px-[5%] py-[2%] flex justify-between relative" id="box${index}">
                             <img class="absolute left-12 md:left-24 lg:left-16 bottom-24 md:bottom-12 lg:bottom-16" src="${product.image}" alt="Shoes ">
-                            <h2 class=" font-bold text-3xl absolute bottom-2 left-5"> ${product.price} </h2>
-                            <button data-index = "${index}" class="atc"><i data-index = "${index}" class="atc ri-add-line rounded-xl text-2xl px-2 py-1.5 h-10 w-10 font-bold bottom-2 right-5 absolute bg-white "></i> </button>
+                            <h2 class="text-white font-bold text-3xl absolute bottom-6 left-5 lg:left-8"> ${product.price} </h2>
+                            <button data-index = "${index}" class="atc"><i data-index = "${index}" class="atc ri-add-line rounded-xl text-2xl px-2 py-1.5 h-10 w-10 font-bold bottom-6 right-5 lg:right-8 absolute bg-white "></i> </button>
                         </div>
                         <div class="des">
                             <h3 class="m-[5%] mt-10 md:mt-[20%] lg:mt-2 font-bold text-xl max-w-max ">${product.name} </h3>
@@ -352,6 +352,9 @@ function showCart() {
         })
         document.querySelector(".cartexpand").innerHTML = clutter;
     })
+    document.querySelector(".hero-section").addEventListener("click", function() {
+        document.querySelector(".cartexpand").style.display = "none";
+    });
 }
 addProduct();
 addToCart();
