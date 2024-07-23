@@ -20,8 +20,10 @@ function preLoader() {
                     ease: "power4.inOut"
 
                 })
+                productAndCart();
                 thirdSectionAnimation();
                 marqueeParaAnimation();
+                zapposAnimation();
             }
         });
         tl.to(".loader-content1", { duration: 0.7, autoAlpha: 1, stagger: 0.5 })
@@ -147,24 +149,6 @@ function thirdSectionAnimation() {
         });
     });
 
-    
-
-    /* Old Animation 
-
-    //   gsap.utils.toArray(".righttext").forEach((txt) => {
-    //     gsap.from(txt, {
-    //       scrollTrigger: {
-    //         trigger: txt,
-    //         start: "top 70%",
-    //         end: "top top",
-    //         scrub: true,
-    //       },
-    //       opacity: 0,
-    //       y:100,
-    //       duration: 1,
-    //     });
-    //   });
-    */
     var sText = document.querySelectorAll(".righttext");
 
     sText.forEach(function (element) {
@@ -174,13 +158,13 @@ function thirdSectionAnimation() {
         gsap.from(chars, {
             scrollTrigger: {
                 trigger: element,
-                start: "top 70%",
+                start: "top 50%",
                 end: "top 20%",
                 scrub: true,
             },
             opacity: 0,
             y: 50,
-            stagger: 0.3,
+            stagger: 0.4,
             duration: 1,
             ease: "power4.inOut",
         });
@@ -307,7 +291,7 @@ function addProduct() {
                             <h2 class="text-white font-bold text-3xl absolute bottom-6 left-5 lg:left-8"> ${product.price} </h2>
                             <button data-index = "${index}" class="atc"><i data-index = "${index}" class="atc ri-add-line rounded-xl text-2xl px-2 py-1.5 h-10 w-10 font-bold bottom-6 right-5 lg:right-8 absolute bg-white "></i> </button>
                         </div>
-                        <div class="des">
+                        <div class="product-description">
                             <h3 class="m-[5%] mt-10 md:mt-[20%] lg:mt-2 font-bold text-xl max-w-max ">${product.name} </h3>
                             <h4 class="ml-[5%] mt-2 font-normal w-[40vw] lg:w-[65%] ">${product.description} </h4>
                         </div>
@@ -317,11 +301,63 @@ function addProduct() {
 
     viewmore = "";
     viewmore = `<div class="more w-full font-bold self-center flex justify-center items-center ">
-                        <h1 class=" ">View More </h1>
-                        <i class="ri-arrow-right-s-line text-lg "></i>
+                        <h1 class=" text-3xl">View More </h1>
+                        <i class="ri-arrow-right-s-line text-4xl "></i>
                     </div>`;
     document.querySelector(".products").innerHTML += viewmore;
+  
+    gsap.from(".box",{
+        scrollTrigger: {
+            trigger: ".products",
+            start: "top 80%",
+            end: "top 50%",
+            scrub:true,
+            },
+            opacity:0,
+            scale: 0.2,
+            stagger: 0.5,
+            duration: 1 ,
+            ease: "none",
+            });
+    gsap.from(".product-description",{
+        scrollTrigger: {
+            trigger: ".products",
+            start: "top 60%",
+            end: "top 40%",
+            scrub:true,
+            },
+            opacity:0,
+            x: -80,
+            stagger: 0.5,
+            duration: 1 ,
+            ease: "none",
+            });
+    gsap.from(".more",{
+        scrollTrigger: {
+            trigger: ".products",
+            start: "top 60%",
+            end: "top 40%",
+            scrub:true,
+            },
+            opacity:0,
+            x: -80,
+            duration: 1 ,
+            ease: "none",
+            });
+    gsap.from(".skate-boy",{
+        scrollTrigger: {
+            trigger: ".products",
+            start: "top 60%",
+            end: "top 40%",
+            scrub:true,
+            },
+            opacity:0,
+            x: -120,
+            duration: 2,
+            ease: "none",
+            });
 
+            
 
 
 }
@@ -361,6 +397,43 @@ addToCart();
 showCart();
 }
 
+function parallaxAnimation(){
+window.addEventListener('scroll', function() {
+    const scrollPosition = window.pageYOffset;
+    const heading = document.querySelector('.heading');
+    const centerShoe = document.querySelector('.shoesCenter');
+    const shoes1 = document.querySelector('.shoes1');
+    const shoes2 = document.querySelector('.shoes2');
+    const shoes3 = document.querySelector('.shoes3');
+
+    heading.style.transform = `translate(-50%, calc(-50% - ${scrollPosition * 0.1}px))`;
+    centerShoe.style.transform = `translate(-50%, calc(-50% - ${scrollPosition * 0.2}px))`;
+    shoes1.style.transform = `translateY( calc(-50% - ${scrollPosition * 0.08}px))`;
+    shoes2.style.transform = `translateY( calc(-50% - ${scrollPosition * 0.08}px))`;
+    shoes3.style.transform = `translateY(calc(-50% - ${scrollPosition * 0.04}px))`;
+});
+}
+
+function zapposAnimation(){
+var sText = document.querySelectorAll(".bottom-zappaos");
+
+sText.forEach(function (eleent) {
+    var splitText = new SplitType(eleent, { type: "chars" });
+    var chars = splitText.chars;
+
+    gsap.from(chars, {
+        scrollTrigger: {
+            trigger: eleent,
+            start: "bottom bottom",
+        },
+        y: 200,
+        stagger: 0.05,
+        duration: 1,
+        ease: "none",
+    });
+});
+}
+
 
 
 preLoader();
@@ -368,4 +441,5 @@ menuTab();
 marqueeAnimation();
 mobileMarqueeAnimation();
 shoeAnimation();
-productAndCart();
+
+parallaxAnimation();
